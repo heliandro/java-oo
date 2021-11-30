@@ -1,11 +1,11 @@
 public class Conta {
-    
+
     double saldo;
     int agencia;
     int numero;
-    String titular;
+    Cliente titular;
 
-    Conta(double saldo, String titular) {
+    Conta(double saldo, Cliente titular) {
         this.saldo = saldo;
         this.titular = titular;
     }

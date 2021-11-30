@@ -1,8 +1,10 @@
 public class TestaConta {
     public static void main(String[] args) {
+        Cliente heliandro = new Cliente("Heliandro");
+        Cliente kivia = new Cliente("Kivia");
 
-        Conta contaDoHeliandro = new Conta(10000, "Heliandro");
-        Conta contaDaKivia = new Conta(500, "Kivia");
+        Conta contaDoHeliandro = new Conta(10000, heliandro);
+        Conta contaDaKivia = new Conta(500, kivia);
 
         System.out.println("Conta do : " + contaDoHeliandro.titular
             + " | saldo: " + contaDoHeliandro.saldo);

@@ -8,7 +8,9 @@ public class App {
         Conta contaDaKivia = new Conta(500, kivia);
 
         contaDoHeliandro.deposita(700);
-        System.out.println(contaDoHeliandro.titular.nome);
+        contaDoHeliandro.setNumero(1337);
+
+        System.out.println(contaDoHeliandro.getNumero());
 
     }
 }

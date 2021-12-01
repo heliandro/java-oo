@@ -4,11 +4,11 @@ public class App {
         Cliente heliandro = new Cliente("Heliandro", "555.444.222.77", "Tech Lead");
         Cliente kivia = new Cliente("Kivia", "111.333.888.55", "Designer");
 
-        Conta contaDoHeliandro = new Conta(10000, heliandro);
-        Conta contaDaKivia = new Conta(500, kivia);
+        Conta contaDoHeliandro = new Conta(1234, 77721, heliandro);
+        Conta contaDaKivia = new Conta(1234, 45522, kivia);
 
         contaDoHeliandro.deposita(700);
-        contaDoHeliandro.setNumero(1337);
+        contaDaKivia.deposita(500);
         heliandro.setNome("Heliandro Lavor");
 
         System.out.println(contaDoHeliandro.getNumero());

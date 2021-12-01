@@ -15,5 +15,6 @@ public class App {
         System.out.println(contaDoHeliandro.getTitular().getNome());
         contaDoHeliandro.getTitular().setProfissao("Dev Master");
         System.out.println(contaDoHeliandro.getTitular().getProfissao());
+        System.out.println(Conta.getTotal());
     }
 }

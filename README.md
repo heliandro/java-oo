@@ -1,18 +1,34 @@
-## Getting Started
+# Java - Orientação a objetos (parte 1)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Estudo de orientação a objetos utilizando a linguagem Java.
 
-## Folder Structure
+## Requisitos
 
-The workspace contains two folders by default, where:
+* OpenJDK 11+
+* Editor de texto
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Pontos abordados
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+* Composição
+* Encapsulamento
+* Construtores
+* Membros estaticos
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Organização
 
-## Dependency Management
+Os topicos abordados estão comitados em suas respectivas branchs.
+Por exemplo, para o tópico de `Composição` temos uma branch chamada `feature/composicao` e assim sucessivamente.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Rodando o código
+
+para rodar o código é muito simples, execute:
+
+```sh
+javac App.java
+```
+
+e depois:
+
+```sh
+java App
+```

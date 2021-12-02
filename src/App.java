@@ -1,26 +1,15 @@
 public class App {
     public static void main(String[] args) throws Exception {
         
-        Funcionario heliandro = new Funcionario();
-        heliandro.setNome("Heliandro Lavor");
-        heliandro.setCpf("2233556469");
-        heliandro.setSalario(5000.80);
+        ContaCorrente cc = new ContaCorrente(111, 111);
+        cc.deposita(100.0);
 
-        System.out.println(heliandro.getNome());
-        System.out.println(heliandro.getBonificacao());
+        ContaPoupanca cp = new ContaPoupanca(222, 222);
+        cp.deposita(200.0);
 
-        Gerente ramon = new Gerente();
-        ramon.setNome("Ramonzito");
-        ramon.setCpf("55577744499");
-        ramon.setSalario(9000);
+        cc.transfere(10.0, cp);
 
-        System.out.println(ramon.getNome());
-        System.out.println(ramon.getBonificacao());
-
-        ramon.setSenha(2222);
-
-        boolean autenticou = ramon.autentica(2222);
-
-        System.out.println(autenticou);
+        System.out.println("CC | saldo: " + cc.getSaldo());
+        System.out.println("CP | saldo: " + cp.getSaldo());
     }
 }

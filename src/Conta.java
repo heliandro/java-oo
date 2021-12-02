@@ -6,12 +6,11 @@ public class Conta {
     private Cliente titular;
     private static int total;
 
-    public Conta(int agencia, int numero, Cliente titular) {
+    public Conta(int agencia, int numero) {
         Conta.total++;
         System.out.println("O total de contas é " + Conta.total);
         this.agencia = agencia;
         this.numero = numero;
-        this.titular = titular;
     }
 
     void deposita(double saldo) {
@@ -55,6 +54,10 @@ public class Conta {
 
     public Cliente getTitular() {
         return this.titular;
+    }
+
+    public void setTitular(Cliente titular) {
+        this.titular = titular;
     }
 
     public static int getTotal() {

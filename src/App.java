@@ -1,15 +1,15 @@
 public class App {
     public static void main(String[] args) throws Exception {
         
-        ContaCorrente cc = new ContaCorrente(111, 111);
-        cc.deposita(100.0);
+        Gerente heliandro = new Gerente();
+        heliandro.setSenha(2222);
 
-        ContaPoupanca cp = new ContaPoupanca(222, 222);
-        cp.deposita(200.0);
+        Administrador daniel = new Administrador();
+        daniel.setSenha(3333);
 
-        cc.transfere(10.0, cp);
+        SistemaInterno sistema = new SistemaInterno();
 
-        System.out.println("CC | saldo: " + cc.getSaldo());
-        System.out.println("CP | saldo: " + cp.getSaldo());
+        sistema.autentica(heliandro);
+        sistema.autentica(daniel);
     }
 }

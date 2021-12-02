@@ -1,7 +1,11 @@
 // Gerente é um Funcionario e asssina um contrato Autenticavel
 public class Gerente extends Funcionario implements Autenticavel {
 
-    private int senha;
+    private AutenticacaoUtil autenticacaoUtil;
+
+    public Gerente() {
+        this.autenticacaoUtil = new AutenticacaoUtil();
+    }
 
     public double getBonificacao() {
         System.out.println("chamou o metodo getBonificacao do gerente");
@@ -10,14 +14,11 @@ public class Gerente extends Funcionario implements Autenticavel {
 
     @Override
     public void setSenha(int senha) {
-        this.senha = senha;
+        this.autenticacaoUtil.setSenha(senha);
     }
 
     @Override
     public boolean autentica(int senha)  {
-        if (this.senha == senha) {
-            return true;
-        }
-        return false;
+        return this.autenticacaoUtil.autentica(senha);
     }
 }

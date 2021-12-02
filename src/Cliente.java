@@ -3,12 +3,13 @@ public class Cliente implements Autenticavel {
     private String nome;
     private String cpf;
     private String profissao;
-    private int senha;
+    private AutenticacaoUtil autenticacaoUtil;
 
     Cliente(String nome, String cpf, String profissao) {
         this.nome = nome;
         this.cpf = cpf;
         this.profissao = profissao;
+        this.autenticacaoUtil = new AutenticacaoUtil();
     }
 
     Cliente(String nome) {
@@ -37,14 +38,11 @@ public class Cliente implements Autenticavel {
     
     @Override
     public void setSenha(int senha) {
-        this.senha = senha;
+        this.autenticacaoUtil.setSenha(senha);
     }
 
     @Override
     public boolean autentica(int senha)  {
-        if (this.senha == senha) {
-            return true;
-        }
-        return false;
+        return this.autenticacaoUtil.autentica(senha);
     }
 }

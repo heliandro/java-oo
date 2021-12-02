@@ -1,20 +1,26 @@
 public class App {
     public static void main(String[] args) throws Exception {
         
-        Cliente heliandro = new Cliente("Heliandro", "555.444.222.77", "Tech Lead");
-        Cliente kivia = new Cliente("Kivia", "111.333.888.55", "Designer");
-
-        Conta contaDoHeliandro = new Conta(1234, 77721, heliandro);
-        Conta contaDaKivia = new Conta(1234, 45522, kivia);
-
-        contaDoHeliandro.deposita(700);
-        contaDaKivia.deposita(500);
+        Funcionario heliandro = new Funcionario();
         heliandro.setNome("Heliandro Lavor");
+        heliandro.setCpf("2233556469");
+        heliandro.setSalario(5000.80);
 
-        System.out.println(contaDoHeliandro.getNumero());
-        System.out.println(contaDoHeliandro.getTitular().getNome());
-        contaDoHeliandro.getTitular().setProfissao("Dev Master");
-        System.out.println(contaDoHeliandro.getTitular().getProfissao());
-        System.out.println(Conta.getTotal());
+        System.out.println(heliandro.getNome());
+        System.out.println(heliandro.getBonificacao());
+
+        Gerente ramon = new Gerente();
+        ramon.setNome("Ramonzito");
+        ramon.setCpf("55577744499");
+        ramon.setSalario(9000);
+
+        System.out.println(ramon.getNome());
+        System.out.println(ramon.getBonificacao());
+
+        ramon.setSenha(2222);
+
+        boolean autenticou = ramon.autentica(2222);
+
+        System.out.println(autenticou);
     }
 }

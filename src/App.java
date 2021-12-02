@@ -1,26 +1,24 @@
 public class App {
     public static void main(String[] args) throws Exception {
         
-        Funcionario heliandro = new Funcionario();
-        heliandro.setNome("Heliandro Lavor");
-        heliandro.setCpf("2233556469");
-        heliandro.setSalario(5000.80);
+        Gerente heliandro = new Gerente();
+        heliandro.setNome("Heliandro");
+        heliandro.setSalario(12000.0);
 
-        System.out.println(heliandro.getNome());
-        System.out.println(heliandro.getBonificacao());
+        Funcionario boechat = new Funcionario();
+        boechat.setNome("Boechat");
+        boechat.setSalario(15000.0);
 
-        Gerente ramon = new Gerente();
-        ramon.setNome("Ramonzito");
-        ramon.setCpf("55577744499");
-        ramon.setSalario(9000);
+        LiderTecnico henrique = new LiderTecnico();
+        henrique.setNome("Henrique");
+        henrique.setSalario(13000.0);
 
-        System.out.println(ramon.getNome());
-        System.out.println(ramon.getBonificacao());
+        ControleBonificacao controle = new ControleBonificacao();
 
-        ramon.setSenha(2222);
+        controle.registra(heliandro);
+        controle.registra(boechat);
+        controle.registra(henrique);
 
-        boolean autenticou = ramon.autentica(2222);
-
-        System.out.println(autenticou);
+        System.out.println(controle.getSoma());
     }
 }

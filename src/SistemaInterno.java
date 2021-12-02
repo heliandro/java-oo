@@ -2,8 +2,8 @@ public class SistemaInterno {
     
     private int senha = 2222;
 
-    public void autentica(FuncionarioAutenticavel gerente) {
-        boolean autenticou = gerente.autentica(this.senha);
+    public void autentica(Autenticavel pessoa) {
+        boolean autenticou = pessoa.autentica(this.senha);
         if (autenticou) {
             System.out.println("Pode entrar no sitema!");
         } else {

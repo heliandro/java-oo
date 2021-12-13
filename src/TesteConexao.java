@@ -1,7 +1,7 @@
 public class TesteConexao {
     public static void main(String[] args) {
         
-        // esse novo recurso já usa um finally implicito
+        // esse recurso já usa um finally implicito
         try ( Conexao conexao = new Conexao() ) {
             conexao.leDados();
         } catch(IllegalStateException ex) {

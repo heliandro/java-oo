@@ -1,6 +1,6 @@
-# Java - Orientação a objetos (parte 1)
+# POC Java
 
-Estudo de orientação a objetos utilizando a linguagem Java.
+Estudo da linguagem Java
 
 ## Requisitos
 
@@ -21,14 +21,56 @@ Por exemplo, para o tópico de `Composição` temos uma branch chamada `feature/
 
 ## Rodando o código
 
-para rodar o código é muito simples, execute:
+para compilar o código
 
 ```sh
-javac App.java
+javac -d bin ./src/**/*.java
 ```
 
-e depois:
+para executar
 
 ```sh
-java App
+java -cp bin App
+```
+
+## Gerando a documentação
+
+```sh
+javadoc src/**/*.java -d docs
+```
+
+## Trabalhando com jar
+
+[jar file](https://docs.oracle.com/javase/tutorial/deployment/jar/appman.html)
+
+[Criando um jar](https://docs.oracle.com/javase/tutorial/deployment/jar/appman.html)
+
+entre na pasta bin
+
+```sh
+cd bin
+```
+
+crie o jar
+
+```sh
+jar cvfe bytebank.jar "$(find br | grep TesteSaca.class | awk '{gsub("\/", ".", $0); gsub("\.class", "", $0); print}')" ./**/*.class
+```
+
+[executando o jar](https://docs.oracle.com/javase/tutorial/deployment/jar/run.html)
+
+```sh
+java -jar bytebank.jar
+```
+
+[mostra a estrutura de diretorios dentro do jar](https://docs.oracle.com/javase/tutorial/deployment/jar/view.html)
+
+```sh
+jar -tf bytebank.jar
+```
+
+[descompacta o jar](https://docs.oracle.com/javase/tutorial/deployment/jar/unpack.html)
+
+```sh
+jar -xf bytebank.jar
 ```

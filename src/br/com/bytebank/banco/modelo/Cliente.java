@@ -1,3 +1,12 @@
+package br.com.bytebank.banco.modelo;
+
+/**
+ * Classe que representa um cliente no Bytebank.
+ * 
+ * @author Heliandro
+ * @version 0.1
+ * 
+ */
 public class Cliente implements Autenticavel {
 
     private String nome;
@@ -5,14 +14,14 @@ public class Cliente implements Autenticavel {
     private String profissao;
     private AutenticacaoUtil autenticacaoUtil;
 
-    Cliente(String nome, String cpf, String profissao) {
+    public Cliente(String nome, String cpf, String profissao) {
         this.nome = nome;
         this.cpf = cpf;
         this.profissao = profissao;
         this.autenticacaoUtil = new AutenticacaoUtil();
     }
 
-    Cliente(String nome) {
+    public Cliente(String nome) {
         this.nome = nome;
     }
 

@@ -1,3 +1,5 @@
+package br.com.bytebank.banco.modelo;
+
 public class Fluxo {
 	public static void main(String args[]) {
 		System.out.println("Ini do main");

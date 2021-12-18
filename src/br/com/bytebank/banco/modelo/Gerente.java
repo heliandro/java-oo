@@ -1,14 +1,17 @@
-public class Administrador extends Funcionario implements Autenticavel {
+package br.com.bytebank.banco.modelo;
+
+// Gerente é um Funcionario e asssina um contrato Autenticavel
+public class Gerente extends Funcionario implements Autenticavel {
 
     private AutenticacaoUtil autenticacaoUtil;
 
-    public Administrador() {
+    public Gerente() {
         this.autenticacaoUtil = new AutenticacaoUtil();
     }
 
-    @Override
     public double getBonificacao() {
-        return 50;
+        System.out.println("chamou o metodo getBonificacao do gerente");
+        return super.getSalario();
     }
 
     @Override

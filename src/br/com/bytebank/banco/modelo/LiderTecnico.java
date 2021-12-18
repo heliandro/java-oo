@@ -1,3 +1,5 @@
+package br.com.bytebank.banco.modelo;
+
 public class LiderTecnico extends Funcionario {
     
     public double getBonificacao() {

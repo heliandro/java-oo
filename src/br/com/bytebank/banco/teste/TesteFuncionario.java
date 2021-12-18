@@ -1,3 +1,8 @@
+package br.com.bytebank.banco.teste;
+
+import br.com.bytebank.banco.modelo.Autenticavel;
+import br.com.bytebank.banco.modelo.Gerente;
+
 public class TesteFuncionario {
     public static void main(String[] args) {
         

@@ -1,3 +1,5 @@
+package br.com.bytebank.banco.modelo;
+
 public class ContaPoupanca extends Conta {
     
     public ContaPoupanca(int agencia, int numero) {
@@ -7,5 +9,10 @@ public class ContaPoupanca extends Conta {
     @Override
     public void deposita(double valor) {
         super.saldo += valor;
+    }
+
+    @Override
+    public String toString() {
+        return "Conta Poupanca | " + super.toString();
     }
 }

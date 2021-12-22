@@ -1,6 +1,5 @@
 package br.com.bytebank.banco.teste.util;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 import br.com.bytebank.banco.modelo.Conta;

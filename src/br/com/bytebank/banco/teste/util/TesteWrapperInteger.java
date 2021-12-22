@@ -5,15 +5,10 @@ import java.util.List;
 
 public class TesteWrapperInteger {
     public static void main(String[] args) {
-        
-        // primitivo
-        int[] idades = new int[5];
-        // referencia
-        String[] nomes = new String[5];
 
-        int idade = 29; //Integer
         Integer idadeRef = Integer.valueOf(29); // wrapper | autoboxing
         int valor = idadeRef.intValue(); // unboxing
+        System.out.println(valor);
         
         List<Integer> numeros = new ArrayList<Integer>();
         numeros.add(29); //autoboxing => cria um objeto integer e guarda a ref.

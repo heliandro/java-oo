@@ -1,5 +1,7 @@
 package br.com.bytebank.banco.modelo;
 
+import java.io.Serializable;
+
 /**
  * Classe que representa um cliente no Bytebank.
  * 
@@ -7,7 +9,9 @@ package br.com.bytebank.banco.modelo;
  * @version 0.1
  * 
  */
-public class Cliente implements Autenticavel {
+public class Cliente implements Autenticavel, Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private String nome;
     private String cpf;
@@ -36,6 +40,7 @@ public class Cliente implements Autenticavel {
     public String getCpf() {
         return this.cpf;
     }
+
 
     public String getProfissao() {
         return this.profissao;

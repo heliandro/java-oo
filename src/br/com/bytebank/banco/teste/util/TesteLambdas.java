@@ -1,8 +1,6 @@
 package br.com.bytebank.banco.teste.util;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import br.com.bytebank.banco.modelo.Cliente;
@@ -39,10 +37,7 @@ public class TesteLambdas {
         lista.add(cc3);
         lista.add(cc4);
 
-        // function object | classes anonimas
-        lista.sort(
-            (Conta c1, Conta c2) -> Integer.compare(c1.getNumero(), c2.getNumero())
-        );
+        lista.sort( (Conta c1, Conta c2) -> Integer.compare(c1.getNumero(), c2.getNumero()));
 
         lista.forEach( (Conta conta) -> System.out.println(conta + " | saldo: " + conta.getSaldo()) );
     }
